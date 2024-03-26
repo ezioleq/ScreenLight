@@ -17,6 +17,13 @@ public class MainActivity : Activity
 
     private void HideNavigation()
     {
-        Window.DecorView.SystemUiFlags = SystemUiFlags.HideNavigation | SystemUiFlags.Fullscreen;
+        if (Window?.DecorView is null)
+            return;
+
+        const SystemUiFlags uiFlags = SystemUiFlags.HideNavigation | SystemUiFlags.Fullscreen;
+
+#pragma warning disable CA1422 // Validate platform compatibility
+        Window.DecorView.SystemUiFlags = uiFlags;
+#pragma warning restore CA1422
     }
 }
