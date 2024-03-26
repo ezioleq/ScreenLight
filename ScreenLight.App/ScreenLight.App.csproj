@@ -9,4 +9,10 @@
         <ApplicationVersion>1</ApplicationVersion>
         <ApplicationDisplayVersion>0.1.0</ApplicationDisplayVersion>
     </PropertyGroup>
+    <ItemGroup>
+      <AndroidResource Update="Resources\drawable\power_settings_new.xml">
+        <SubType>Designer</SubType>
+        <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      </AndroidResource>
+    </ItemGroup>
 </Project>
