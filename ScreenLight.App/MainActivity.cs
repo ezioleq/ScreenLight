@@ -1,9 +1,14 @@
 using _Microsoft.Android.Resource.Designer;
+using Android.Content.PM;
 using Android.Views;
 
 namespace ScreenLight.App;
 
-[Activity(Label = "@string/app_name", MainLauncher = true)]
+[Activity(
+    Label = "@string/app_name",
+    MainLauncher = true,
+    ScreenOrientation = ScreenOrientation.Portrait
+)]
 public class MainActivity : Activity
 {
     protected override void OnCreate(Bundle? savedInstanceState)
