@@ -11,8 +11,19 @@ public class MainActivity : Activity
         base.OnCreate(savedInstanceState);
 
         HideNavigation();
+        SetScreenBrightness(1f);
 
         SetContentView(ResourceConstant.Layout.activity_main);
+    }
+
+    private void SetScreenBrightness(float brightness)
+    {
+        var windowAttributes = new WindowManagerLayoutParams();
+
+        windowAttributes.CopyFrom(Window.Attributes);
+        windowAttributes.ScreenBrightness = brightness;
+
+        Window.Attributes = windowAttributes;
     }
 
     private void HideNavigation()
