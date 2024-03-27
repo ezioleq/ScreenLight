@@ -6,11 +6,11 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <ApplicationId>com.ezioleq.ScreenLight</ApplicationId>
-        <ApplicationVersion>1</ApplicationVersion>
-        <ApplicationDisplayVersion>0.4.0</ApplicationDisplayVersion>
         <Company>ezioleq</Company>
-        <AssemblyVersion>0.4.0</AssemblyVersion>
-        <FileVersion>0.4.0</FileVersion>
+        <ApplicationVersion>2</ApplicationVersion>
+        <ApplicationDisplayVersion>0.4.5</ApplicationDisplayVersion>
+        <AssemblyVersion>0.4.5</AssemblyVersion>
+        <FileVersion>0.4.5</FileVersion>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
         <AndroidPackageFormat>apk</AndroidPackageFormat>
