@@ -20,17 +20,23 @@ public class MainActivity : Activity
 
         HideNavigation();
         SetScreenBrightness(1f);
-        Window?.DecorView.SetBackgroundColor(Color.White);
+        ToggleWhiteScreen(true);
 
         var toggleButton = FindViewById<ImageView>(ResourceConstant.Id.toggleButton);
-        var clicked = true;
+        var enabled = false;
 
         toggleButton!.Click += (_, _) =>
         {
-            clicked = !clicked;
-
-            Window?.DecorView.SetBackgroundColor(clicked ? Color.White : Color.Black);
+            ToggleWhiteScreen(enabled);
+            enabled = !enabled;
         };
+    }
+
+    private void ToggleWhiteScreen(bool enable)
+    {
+        var currentColor = enable ? Color.White : Color.Black;
+
+        Window?.DecorView.SetBackgroundColor(currentColor);
     }
 
     private void SetScreenBrightness(float brightness)
