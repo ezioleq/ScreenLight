@@ -23,6 +23,9 @@ public class MainActivity : Activity
 
     private void SetScreenBrightness(float brightness)
     {
+        if (Window is null)
+            return;
+
         var windowAttributes = new WindowManagerLayoutParams();
 
         windowAttributes.CopyFrom(Window.Attributes);
