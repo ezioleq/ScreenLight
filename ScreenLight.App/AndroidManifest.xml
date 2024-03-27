@@ -8,5 +8,4 @@
       android:roundIcon="@mipmap/appicon_round"
       android:supportsRtl="true">
   </application>
-  <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
