@@ -23,7 +23,7 @@ public class MainActivity : Activity
         Window?.DecorView.SetBackgroundColor(Color.White);
 
         var toggleButton = FindViewById<ImageView>(ResourceConstant.Id.toggleButton);
-        var clicked = false;
+        var clicked = true;
 
         toggleButton!.Click += (_, _) =>
         {
