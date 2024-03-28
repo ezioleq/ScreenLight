@@ -3,7 +3,7 @@ using Android.Content.PM;
 using Android.Graphics;
 using Android.Views;
 
-namespace ScreenLight.App;
+namespace ScreenLight.App.Activities;
 
 [Activity(
     Label = "@string/app_name",
