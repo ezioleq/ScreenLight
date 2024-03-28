@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ScreenLight</string>
+    <string name="toggle_button_description">Przełącz latarkę</string>
+</resources>
