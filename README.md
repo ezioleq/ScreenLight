@@ -7,9 +7,14 @@ Easily switch your screen to a powerful flashlight with adjustable brightness. G
 
 ## Features
 
-- Toggling white screen
-- Screen birghtness control
-- **Ad-free**
+- [x] Toggling white screen
+- [x] Screen birghtness control
+- [ ] Saving your preferences
+- [ ] Locking flashlight state
+- [ ] Changing color of the light
+- [ ] Optional use of the rear camera flashlight
+- [ ] SOS mode
+- [x] **Ad-free**
 
 ## Device support
 
