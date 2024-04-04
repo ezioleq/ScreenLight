@@ -29,6 +29,8 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="32dp"
             android:layout_gravity="center"
+            android:progressDrawable="@drawable/brightness_seekbar_progress"
+            android:thumb="@null"
             android:min="0"
             android:max="100"
             android:progress="100" />

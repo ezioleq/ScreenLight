@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:gravity="center_vertical">
+        <shape android:shape="rectangle">
+            <solid android:color="#A9A9A9"/>
+            <size android:height="32dp"/>
+            <corners android:radius="32dp"/>
+        </shape>
+    </item>
+    <item android:gravity="center_vertical">
+        <scale android:scaleWidth="100%">
+            <selector>
+                <item android:state_enabled="false" android:drawable="@color/ic_launcher_background"/>
+                <item>
+                    <shape android:shape="rectangle">
+                        <solid android:color="#D8D8D8"/>
+                        <size android:height="32dp"/>
+                        <corners android:radius="32dp"/>
+                    </shape>
+                </item>
+            </selector>
+        </scale>
+    </item>
+</layer-list>
