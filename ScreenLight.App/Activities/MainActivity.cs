@@ -12,6 +12,10 @@ namespace ScreenLight.App.Activities;
 )]
 public class MainActivity : Activity
 {
+    private ImageView _toggleImageView = null!;
+    private SeekBar _brightnessSeekBar = null!;
+    private TextView _brightnessLevelTextView = null!;
+
     protected override void OnCreate(Bundle? savedInstanceState)
     {
         base.OnCreate(savedInstanceState);
@@ -22,22 +26,37 @@ public class MainActivity : Activity
         SetScreenBrightness(1f);
         ToggleWhiteScreen(true);
 
-        var toggleButton = FindViewById<ImageView>(ResourceConstant.Id.toggleButton);
+        _brightnessLevelTextView = FindViewById<TextView>(ResourceConstant.Id.brightnessLevelTextView)!;
+
+        _toggleImageView = FindViewById<ImageView>(ResourceConstant.Id.toggleButton)!;
         var enabled = false;
 
-        toggleButton!.Click += (_, _) =>
+        _toggleImageView.Click += (_, _) =>
         {
             ToggleWhiteScreen(enabled);
             enabled = !enabled;
         };
 
-        var brightnessSeekBar = FindViewById<SeekBar>(ResourceConstant.Id.brightnessSeekBar);
+        _brightnessSeekBar = FindViewById<SeekBar>(ResourceConstant.Id.brightnessSeekBar)!;
 
-        brightnessSeekBar!.ProgressChanged += (_, progressChangedArgs) =>
+        _brightnessSeekBar.StartTrackingTouch += (_, _) => ShowCurrentBrightnessLevel(true);
+        _brightnessSeekBar.StopTrackingTouch += (_, _) => ShowCurrentBrightnessLevel(false);
+
+        _brightnessSeekBar.ProgressChanged += (_, progressChangedArgs) =>
         {
             var percent = progressChangedArgs.Progress / 100f;
             SetScreenBrightness(percent);
+
+            _brightnessLevelTextView.Text = progressChangedArgs.Progress.ToString();
         };
+
+        ShowCurrentBrightnessLevel(false);
+    }
+
+    private void ShowCurrentBrightnessLevel(bool show)
+    {
+        _toggleImageView.Visibility = show ? ViewStates.Gone : ViewStates.Visible;
+        _brightnessLevelTextView.Visibility = show ? ViewStates.Visible : ViewStates.Gone;
     }
 
     private void ToggleWhiteScreen(bool enable)

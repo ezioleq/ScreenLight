@@ -17,6 +17,18 @@
         android:padding="50dp"
         android:layout_centerInParent="true" />
 
+    <TextView
+        android:id="@+id/brightnessLevelTextView"
+        android:layout_width="128dp"
+        android:layout_height="72dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:gravity="center"
+        android:textSize="48dp"
+        android:textStyle="bold"
+        android:text="100"
+        android:layout_centerInParent="true" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="120dp"
