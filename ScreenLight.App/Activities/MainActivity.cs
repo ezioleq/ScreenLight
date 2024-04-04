@@ -30,6 +30,14 @@ public class MainActivity : Activity
             ToggleWhiteScreen(enabled);
             enabled = !enabled;
         };
+
+        var brightnessSeekBar = FindViewById<SeekBar>(ResourceConstant.Id.brightnessSeekBar);
+
+        brightnessSeekBar!.ProgressChanged += (_, progressChangedArgs) =>
+        {
+            var percent = progressChangedArgs.Progress / 100f;
+            SetScreenBrightness(percent);
+        };
     }
 
     private void ToggleWhiteScreen(bool enable)

@@ -16,4 +16,23 @@
         android:scaleType="fitCenter"
         android:padding="50dp"
         android:layout_centerInParent="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <SeekBar
+            android:id="@+id/brightnessSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_gravity="center"
+            android:min="0"
+            android:max="100"
+            android:progress="100" />
+
+    </LinearLayout>
+
 </RelativeLayout>
