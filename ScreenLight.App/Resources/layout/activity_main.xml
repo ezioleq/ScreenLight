@@ -41,11 +41,13 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="32dp"
             android:layout_gravity="center"
-            android:progressDrawable="@drawable/brightness_seekbar_progress"
-            android:thumb="@null"
+            android:splitTrack="false"
+            android:progressDrawable="@drawable/brightness_seekbar"
+            android:thumb="@drawable/brightness_seekbar_thumb"
             android:min="0"
             android:max="100"
-            android:progress="100" />
+            android:thumbOffset="0dp"
+            android:progress="50" />
 
     </LinearLayout>
 

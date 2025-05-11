@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/secondaryProgress">
+        <shape>
+            <solid android:color="#B1B1B1"/>
+            <size android:height="32dp"/>
+            <corners android:radius="16dp"/>
+        </shape>
+    </item>
+
+    <item android:id="@android:id/progress">
+        <clip android:drawable="@drawable/brightness_seekbar_progress"/>
+    </item>
+</layer-list>
